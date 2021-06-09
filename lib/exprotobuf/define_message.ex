@@ -373,7 +373,7 @@ defmodule Protobuf.DefineMessage do
         %Field{name: name, occurrence: :repeated} ->
           {name, []}
 
-        %Field{name: name, opts: [default: default]} ->
+        %Field{name: name, opts: [{:default, default} | _]} ->
           {name, default}
 
         %Field{name: name} ->
